@@ -4,6 +4,7 @@ import Stats from './components/Stats';
 import Mission from './components/Mission';
 import Products from './components/Products';
 import Tradition from './components/Tradition';
+import OrderCalculator from './components/OrderCalculator';
 import CtaMarquee from './components/CtaMarquee';
 import Footer from './components/Footer';
 import useFadeIn from './hooks/useFadeIn';
@@ -20,6 +21,7 @@ function App() {
       <Mission />
       <Products />
       <Tradition />
+      <OrderCalculator />
       <CtaMarquee />
       <Footer />
     </>

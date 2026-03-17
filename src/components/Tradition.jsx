@@ -43,7 +43,7 @@ export default function Tradition() {
           </div>
         </div>
         <div className="tradition-visual">
-          <img src="/assets/images/items/avental.png" width="300px" height="500px" className="hero-img-placeholder" alt="imagem de avental da alimentos mesquita" />
+          <img src="/assets/images/items/avental.png" className="tradition-img" alt="imagem de avental da alimentos mesquita" />
         </div>
       </div>
     </section>
