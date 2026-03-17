@@ -31,6 +31,7 @@ export default function Navbar() {
           <a href="#sobre" onClick={closeMenu}>Sobre</a>
           <a href="#produtos" onClick={closeMenu}>Produtos</a>
           <a href="#tradição" onClick={closeMenu}>Tradição</a>
+          <a href="#pedido" onClick={closeMenu}>Pedido</a>
           <a href="#contato" onClick={closeMenu}>Contato</a>
         </div>
         <a href="https://wa.me/5553999505876" className="btn-primary nav-cta" target="_blank" rel="noopener">
