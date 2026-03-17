@@ -389,7 +389,7 @@ img {
 }
 
 .hero-img-placeholder {
-  width: 100%;
+  width: 25vw;
   border-radius: var(--radius-card);
   overflow: hidden;
 }
