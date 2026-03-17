@@ -1,126 +1,6 @@
 /* ===========================
-   Alimentos Mesquita — Design System
-   Paleta: Vermelho & Branco, Minimalista
-   =========================== */
-
-:root {
-  /* Cores */
-  --primary: #B91C1C;
-  --primary-dark: #7F1D1D;
-  --primary-light: #DC2626;
-  --accent: #FFFFFF;
-  --background: #FFF8F6;
-  --surface-dark: #1C0A0A;
-  --surface-red: #2D0A0A;
-  --text-dark: #1A1A1A;
-  --text-dark-alt: #4A4A4A;
-  --text-light: #FFFFFF;
-  --text-red: #B91C1C;
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --navbar-bg: rgba(255, 248, 246, 0.8);
-
-  /* Tipografia */
-  --font-display: "Playfair Display", serif;
-  --font-mono: "Space Mono", monospace;
-  --font-body: "Inter", sans-serif;
-
-  /* Espaçamento */
-  --space-xs: 8px;
-  --space-sm: 12px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  --space-4xl: 80px;
-
-  /* Bordas */
-  --radius-pill: 500px;
-  --radius-card: 12px;
-  --radius-sm: 6px;
-  --radius-section: 24px;
-
-  /* Efeitos */
-  --blur-glass: blur(12px);
-}
-
-/* ===========================
-   Reset & Base
-   =========================== */
-
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-dark);
-  background-color: var(--background);
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s ease;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ===========================
    Navbar
    =========================== */
-  .navbar-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 12px var(--space-lg);
-  display: grid;
-  grid-template-columns: 200px 1fr auto; 
-  align-items: center;
-  gap: var(--space-xl);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: auto;
-  height: 100%;
-}
-  
-.logo-icon {
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-xl);
-}
-
-.nav-cta {
-  display: flex;
-  justify-content: flex-end;
-  min-width: 160px;
-}
-
 
 .navbar {
   position: fixed;
@@ -143,13 +23,14 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-xl);
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 100%;
+  flex-shrink: 0;
   height: 60px;
 }
 
@@ -164,6 +45,19 @@ img {
   font-weight: 600;
   color: var(--primary);
   letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+}
+
+.nav-cta {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 160px;
 }
 
 .nav-links a {
@@ -394,8 +288,6 @@ img {
   overflow: hidden;
 }
 
-
-
 .hero-tags {
   position: relative;
   z-index: 2;
@@ -517,8 +409,6 @@ img {
   color: var(--accent);
   margin-bottom: var(--space-md);
 }
-
-
 
 .section-desc-light {
   font-family: var(--font-body);
@@ -863,6 +753,25 @@ img {
 
 .footer-social a:hover {
   color: var(--accent);
+}
+
+/* ===========================
+   Animations
+   =========================== */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card.fade-in {
+  transition-delay: calc(var(--i, 0) * 0.1s);
 }
 
 /* ===========================
